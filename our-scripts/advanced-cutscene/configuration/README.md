@@ -16,9 +16,12 @@ This page contains all the necessary information for configuring and making the 
 
 <details>
 
-<summary>USING RENZU MULTICHARACTER?</summary>
+<summary>WHICH MULTICHARACTER SYSTEMS REQUIRE MODIFICATIONS?</summary>
 
-If you're using `renzu_multicharacter`, remember to apply additional modifications to make it work. [click here](clothing.md#instructions-for-renzu-multicharacter-users) to view the additional modifications required.
+If you're using any of the multicharacter systems listed below, you'll need to make some additional modifications for the cutscene to work as expected.&#x20;
+
+* [renzu\_multicharacter](../../codekit/configuration/renzu-multicharacter.md)
+* [ZSX\_Multicharacter](multicharacter/zsx-multicharacter.md)
 
 </details>
 
