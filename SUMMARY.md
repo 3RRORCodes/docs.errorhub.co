@@ -16,6 +16,7 @@
     * [Clothing](our-scripts/advanced-cutscene/configuration/clothing.md)
     * [Multicharacter](our-scripts/advanced-cutscene/configuration/multicharacter/README.md)
       * [Renzu Multicharacter](our-scripts/advanced-cutscene/configuration/multicharacter/renzu-multicharacter.md)
+      * [ZSX Multicharacter](our-scripts/advanced-cutscene/configuration/multicharacter/zsx-multicharacter.md)
     * [QB-Apartment](our-scripts/advanced-cutscene/configuration/qb-apartment.md)
     * [QB-Vehiclekeys](our-scripts/advanced-cutscene/configuration/qb-vehiclekeys.md)
   * [Events and Exports](our-scripts/advanced-cutscene/events-and-exports.md)
