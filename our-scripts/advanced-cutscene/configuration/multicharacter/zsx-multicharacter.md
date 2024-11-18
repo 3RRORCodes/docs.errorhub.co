@@ -1,38 +1,29 @@
 # ZSX Multicharacter
 
-If you're using `renzu_multicharacter`, you may need to make some additional modifications. Follow the instructions below based on your clothing script. _<mark style="color:orange;">**If you're not using**</mark><mark style="color:orange;">** **</mark><mark style="color:orange;">**`renzu_multicharacter`**</mark><mark style="color:orange;">**, you can skip this section**</mark>._
+If you're using `ZSX_Multicharacter`, you may need to make some additional modifications. Follow the instructions below based on your clothing script. _<mark style="color:orange;">**If you're not using**</mark><mark style="color:orange;">** **</mark><mark style="color:orange;">**`ZSX_Multicharacter`**</mark><mark style="color:orange;">**, you can skip this section**</mark>._
 
 {% tabs %}
 {% tab title="qb-clothing" %}
-1. Open <mark style="color:yellow;">`config.lua`</mark> located in the <mark style="color:yellow;">`renzu_multicharacter`</mark> folder.
-2. Find the line:
-
-```lua
-qb-clothing:client:openMenu
-```
-
-3. Replace it with the following code:
-
-```lua
-qb-clothes:client:CreateFirstCharacter
-```
+{% hint style="info" %}
+If you're using `qb-clothing`, no additional modifications are needed as long as you've already configured it and followed [this step](zsx-multicharacter.md#qb-clothing).
+{% endhint %}
 {% endtab %}
 
 {% tab title="illenium-appearance" %}
-1. Open <mark style="color:yellow;">`main.lua`</mark> located in the <mark style="color:yellow;">`renzu_multicharacter/client`</mark> folder.
-2. Find the line:
+1. Navigate to <mark style="color:yellow;">`framework_functions.lua`</mark> in the <mark style="color:yellow;">`ZSX_Multicharacter/client/framework`</mark> folder.
+2. Locate the following line in the file:
 
 ```lua
-exports['illenium-appearance']:startPlayerCustomization(function (appearance)
+exports['illenium-appearance']:startPlayerCustomization(function (skin)
 ```
 
-3. Just below `finished = true` (around line 433), insert the following trigger:
+3. Just below the line `HandleHud(false)` (around line 92), insert the following code:
 
 ```lua
 TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
 print('^2Started eh_cutscene')
 ```
 
-<figure><img src="https://media.discordapp.net/attachments/1089526991348314113/1151920912313098331/image.png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
