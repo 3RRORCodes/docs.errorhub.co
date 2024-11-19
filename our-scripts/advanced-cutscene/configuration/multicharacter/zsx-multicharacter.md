@@ -5,7 +5,7 @@ If you're using `ZSX_Multicharacter`, you may need to make some additional modif
 {% tabs %}
 {% tab title="qb-clothing" %}
 {% hint style="info" %}
-If you're using `qb-clothing`, no additional modifications are needed as long as you've already configured it and followed [this step](zsx-multicharacter.md#qb-clothing).
+If you're using `qb-clothing`, no additional modifications are needed as long as you've already configured it and followed [this step](../../../codekit/configuration/clothing.md#qb-clothing).
 {% endhint %}
 {% endtab %}
 
@@ -63,3 +63,4 @@ print('^2Started eh_cutscene')
 <figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
+
