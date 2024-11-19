@@ -24,6 +24,42 @@ TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
 print('^2Started eh_cutscene')
 ```
 
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="fivem-appearance" %}
+1. Navigate to <mark style="color:yellow;">`framework_functions.lua`</mark> in the <mark style="color:yellow;">`ZSX_Multicharacter/client/framework`</mark> folder.
+2. Locate the following line in the file:
+
+```lua
+exports.bl_appearance:InitialCreation(function()
+```
+
+3. Just below the line `HandleHud(false)` (around line 113), insert the following code:
+
+```lua
+TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+print('^2Started eh_cutscene')
+```
+
 <figure><img src="../../../../.gitbook/assets/image.png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="bl_appearance" %}
+1. Navigate to <mark style="color:yellow;">`framework_functions.lua`</mark> in the <mark style="color:yellow;">`ZSX_Multicharacter/client/framework`</mark> folder.
+2. Locate the following line in the file:
+
+```lua
+exports['fivem-appearance']:startPlayerCustomization(function (skin)
+```
+
+3. Just below the line `HandleHud(false)` (around line 79), insert the following code:
+
+```lua
+TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+print('^2Started eh_cutscene')
+```
+
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
