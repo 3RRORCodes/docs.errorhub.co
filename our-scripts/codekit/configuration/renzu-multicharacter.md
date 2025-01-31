@@ -1,6 +1,6 @@
 # Renzu Multicharacter
 
-If you're using `renzu_multicharacter`, you may need to make some additional modifications. Follow the instructions below based on your clothing script. _<mark style="color:orange;">**If you're not using**</mark><mark style="color:orange;">** **</mark><mark style="color:orange;">**`renzu_multicharacter`**</mark><mark style="color:orange;">**, you can skip this section**</mark>._
+If you're using `renzu_multicharacter`, you may need to make some additional modifications. Follow the instructions below based on your clothing script. _<mark style="color:orange;">**If you're not using**</mark><mark style="color:orange;">**&#x20;**</mark><mark style="color:orange;">**`renzu_multicharacter`**</mark><mark style="color:orange;">**, you can skip this section**</mark>._
 
 {% tabs %}
 {% tab title="qb-clothing" %}
