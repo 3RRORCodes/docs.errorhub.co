@@ -91,3 +91,34 @@ Welcome to the **Discord Guide**! This guide shows you how to create a Discord b
 * **Avoid giving Administrator permissions** unless absolutely essential.
 * **Check bot permissions often** to make sure they only have access to what they need.
 {% endhint %}
+
+***
+
+## Developer Mode & Copying IDs
+
+### **Enable Developer Mode**
+
+{% stepper %}
+{% step %}
+### Open **Discord** → Go to **User Settings** (⚙️).
+
+
+{% endstep %}
+
+{% step %}
+### Scroll down to **Advanced** settings.
+
+
+{% endstep %}
+
+{% step %}
+### Toggle ON **Developer Mode**.
+
+
+{% endstep %}
+{% endstepper %}
+
+
+
+s
+
