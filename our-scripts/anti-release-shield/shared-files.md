@@ -6,7 +6,6 @@ icon: copy
 
 {% tabs %}
 {% tab title="config.lua" %}
-````lua
 ```lua
 --------------------------------------------------------------------------------
 --- Need help with Discord setup? 
@@ -185,6 +184,5 @@ end
 lib.locale()
 _ars = {}
 ```
-````
 {% endtab %}
 {% endtabs %}
