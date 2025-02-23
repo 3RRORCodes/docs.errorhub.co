@@ -55,8 +55,32 @@ ehConfig.whitelist = {
 
             -- What should the commands be named?
             add = "release_add",     -- What is the command to add someone to the whitelist?
-            remove = "release_remove" -- What is the command to remove someone from the whitelist?
+            remove = "release_remove", -- What is the command to remove someone from the whitelist?
         }
+    }
+}
+
+-- How should we handle FiveM version checks?
+ehConfig.version = {
+    commands = {
+        -- What command updates the allowed FiveM release versions?
+        -- This is handy when:
+        -- - A new FiveM release version comes out while your server is running
+        -- - The auto-check isn't working and you want to try again
+        update = "release_update",
+
+        -- What command lets you manually set which FiveM release version is allowed?
+        -- This helps when:
+        -- - The auto-check isn't working
+        -- - You want to set a specific version yourself
+        -- Just type: /release_set 278177 (or whatever the latest release version is)
+        -- To find the current latest release version:
+        -- Switch to FiveM release version, restart FiveM, and look at the bottom-right corner
+        set = "release_set",
+
+        -- Which admin group can use these commands?
+        -- Only give this to people you trust!
+        group = "group.admin"
     }
 }
 
@@ -98,7 +122,6 @@ ehConfig.logging = {
         versionEvents = {
             invalidVersion = true,    -- Should we log bad version data? (Recommended: Yes)
             parseError = true,        -- Should we log version check errors? (Recommended: Yes)
-            noVersion = true,         -- Should we log missing version info? (Recommended: Yes)
             usingRelease = true,      -- Should we log release version usage? (Recommended: Upto you)
         },
 
@@ -111,6 +134,12 @@ ehConfig.logging = {
         -- Should we log player when player joins and loads into the server?
         connectionEvents = {
             successfulJoin = false,   -- Should we log successful joins?
+        },
+
+        -- Should we log version command usage?
+        versionCommands = {
+            update = true, -- Should we log when release version update is requested? (Recommended: Upto you)
+            set = true    -- Should we log when release version is set manually? (Highly Recommended: Yes)
         }
     }
 }
@@ -152,7 +181,6 @@ end
 
 ----------------------------------------------------------------
 --- Important: Don't change anything below this line!
---- Why? These are core settings that keep everything working!
 ----------------------------------------------------------------
 lib.locale()
 _ars = {}
