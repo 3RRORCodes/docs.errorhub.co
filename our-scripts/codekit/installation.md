@@ -6,7 +6,7 @@ icon: folder-arrow-down
 
 ### Steps to Install the Resource
 
-1. Download the script from [Keymaster](https://keymaster.fivem.net) under the granted assets.
+1. Download the script from [CFX Portal](https://portal.cfx.re/assets/granted-assets) under the granted assets.
 2. Unzip and save it on your system.
 3. Place the unzipped folder in your server's <mark style="color:yellow;">`resources`</mark> folder.
 4. Rename it to <mark style="color:yellow;">`eh_codekit`</mark>.

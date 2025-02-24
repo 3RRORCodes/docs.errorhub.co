@@ -76,7 +76,7 @@ server_scripts {
 
 <summary>USED WRONG KEYMASTER ACCOUNT TO BUY A RESOURCE</summary>
 
-You can easily transfer a purchased resource to the correct Keymaster account if you accidentally used the incorrect account.
+You can easily transfer a purchased resource to the correct Cfx.re account if you accidentally used the incorrect account.
 
 ***
 
@@ -84,14 +84,14 @@ You can easily transfer a purchased resource to the correct Keymaster account if
 
 ***
 
-Use these steps for transferring any resource to a different Keymaster account:
+Use these steps for transferring any resource to a different cfx.re account:
 
-1. Go to [keymaster](https://keymaster.fivem.net).
+1. Go to [CFX Portal](https://portal.cfx.re/assets/granted-assets).
 2. Then select <mark style="color:yellow;">Granted Assets</mark>.&#x20;
-3. Find the asset or resource that you wish to transfer.&#x20;
-4. There is a dropdown arrow next to the download button. Click it and choose <mark style="color:yellow;">Transfer to Another Account</mark>.
-5. Enter your Keymaster account, and click <mark style="color:yellow;">Transfer Asset License</mark>.&#x20;
-6. Look in the email inbox of your Keymaster account for a confirmation message about the asset transfer, then select <mark style="color:yellow;">Confirm Transfer Request</mark>.
+3. Locate the asset or resource you want to transfer, select it, and click the transfer.
+4. Enter your cfx.re account username, and click on transfer button but keep this mind. <mark style="color:orange;">Transferring this asset will remove its grant from your account.</mark> <mark style="color:orange;"></mark><mark style="color:orange;">**All asset transfers are irreversible and cannot be undone**</mark>**.**&#x20;
+5. Navigate to the cfx.re portal of the target cfx account. Locate the asset section, then select "Pending Transfer" or [click here](https://portal.cfx.re/assets/transfers).
+6. Accept the transfer, and you're all set.
 
 </details>
 

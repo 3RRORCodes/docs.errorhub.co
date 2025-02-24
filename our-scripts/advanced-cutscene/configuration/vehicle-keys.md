@@ -1,31 +1,62 @@
 # Vehicle Keys
 
-If you're using [qb-apartments](https://github.com/qbcore-framework/qb-apartments) with the starting apartment enabled (i.e., `Apartments.Starting` is set to `true` in `qb-apartments/config`), you must follow these steps. Otherwise, you can skip this setup:
+If you're facing an issue where taxi doors unexpectedly close when players try to enter, it's likely due to the vehicle keys script on your server. This happens when the script forcefully locks NPC vehicles, unintentionally locking taxi doors as well.
 
-1. Open the <mark style="color:yellow;">`main.lua`</mark> file in the <mark style="color:yellow;">`qb-apartments/client`</mark> folder.
-2. Insert the following code at the bottom of the <mark style="color:yellow;">`main.lua`</mark> file:
+We've already applied an inbuilt patch, but sometimes vehicle keys scripts override it. To fully resolve this, follow the steps below.
+
+{% tabs %}
+{% tab title="qb-vehiclekeys" %}
+If you're using `qb-vehiclekeys` and NPC vehicles are set to lock, follow these steps:
+
+1. Open the `main.lua` file in the `qb-vehiclekeys/client` folder.
+2. Go to line 58, and modify the file as shown below:
 
 ```lua
-RegisterNetEvent("eh_cutscene:client:resetApartment", function()
-    if not InApartment then return end
-    TriggerServerEvent('qb-apartments:returnBucket')
-    exports['qb-interior']:DespawnInterior(HouseObj, function()
-        TriggerEvent('qb-weathersync:client:EnableSync')
-        Wait(1000)
-        TriggerServerEvent('apartments:server:RemoveObject', CurrentApartment, ClosestHouse)
-        TriggerServerEvent('qb-apartments:server:SetInsideMeta', CurrentApartment, false)
-        CurrentApartment = nil
-        InApartment = false
-        CurrentOffset = 0
-        TriggerServerEvent('apartments:server:setCurrentApartment', nil)
-        DeleteInApartmentTargets()
-        DeleteApartmentsEntranceTargets()
-    end)
-end)
+else -- > approx line 57
+    if not exports["eh_cutscene"]:isVehicleTaxi(entering) then
+        TriggerServerEvent('qb-vehiclekeys:server:setVehLockState', NetworkGetNetworkIdFromEntity(entering), 1)
+        TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+
+        --Make passengers flee
+        local pedsInVehicle = GetPedsInVehicle(entering)
+        for _, pedInVehicle in pairs(pedsInVehicle) do
+            if pedInVehicle ~= GetPedInVehicleSeat(entering, -1) then
+                MakePedFlee(pedInVehicle)
+            end
+        end
+    end
+end
 ```
 
-3. Open the <mark style="color:yellow;">`open.lua`</mark> file in the <mark style="color:yellow;">`eh_cutscene/config`</mark> folder.
-4. Search for the function `cutscene.onStarted()` on line 1, then find and uncomment lines 8-9 (approx). Your function should look somewhat like the example below—just remove the `--` from lines 8 and 9 to enable them.
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption><p>This is how the modified code should look like</p></figcaption></figure>
+{% endtab %}
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+{% tab title="qbx_vehiclekeys" %}
+If you're using `qbx_vehiclekeys` and NPC vehicles are set to lock, follow these steps:
 
+1. Open the `main.lua` file in the `qbx_vehiclekeys\client` folder.
+2. Go to line 252, and modify the file as shown below:
+
+```lua
+local function onVehicleAttemptToEnter(vehicle)
+    if Entity(vehicle).state.doorslockstate then return end
+
+    if exports["eh_cutscene"]:isVehicleTaxi(vehicle) then return end
+
+    local ped = GetPedInVehicleSeat(vehicle, -1)
+    if IsPedAPlayer(ped) then return end
+
+    local isLocked = not GetVehicleConfig(vehicle).noLock and getIsVehicleInitiallyLocked(vehicle, ped and ped ~= 0)
+    local lockState = isLocked and 2 or 1
+    SetVehicleDoorsLocked(vehicle, lockState)
+    TriggerServerEvent('qb-vehiclekeys:server:setVehLockState', NetworkGetNetworkIdFromEntity(vehicle), lockState)
+end
+```
+
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption><p>This is how the modified code should look like</p></figcaption></figure>
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+If you're not using either of these two vehicle keys scripts and still facing the issue, you can easily resolve it using the same method. Alternatively, you can join our Discord for further support.
+{% endhint %}
