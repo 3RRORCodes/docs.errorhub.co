@@ -60,7 +60,7 @@ TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
 print('^2Started eh_cutscene')
 ```
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>This is how the modified client code should look like</p></figcaption></figure>
 {% endtab %}
 {% endtabs %}
 

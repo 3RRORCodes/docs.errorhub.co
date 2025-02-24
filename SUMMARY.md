@@ -18,7 +18,7 @@
       * [Renzu Multicharacter](our-scripts/advanced-cutscene/configuration/multicharacter/renzu-multicharacter.md)
       * [ZSX Multicharacter](our-scripts/advanced-cutscene/configuration/multicharacter/zsx-multicharacter.md)
     * [QB-Apartment](our-scripts/advanced-cutscene/configuration/qb-apartment.md)
-    * [QB-Vehiclekeys](our-scripts/advanced-cutscene/configuration/qb-vehiclekeys.md)
+    * [Vehicle Keys](our-scripts/advanced-cutscene/configuration/vehicle-keys.md)
   * [Events and Exports](our-scripts/advanced-cutscene/events-and-exports.md)
   * [Shared Files](our-scripts/advanced-cutscene/shared-files.md)
 * [Anti-Release Shield](our-scripts/anti-release-shield/README.md)

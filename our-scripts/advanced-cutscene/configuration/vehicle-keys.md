@@ -1,4 +1,4 @@
-# QB-Apartment
+# Vehicle Keys
 
 If you're using [qb-apartments](https://github.com/qbcore-framework/qb-apartments) with the starting apartment enabled (i.e., `Apartments.Starting` is set to `true` in `qb-apartments/config`), you must follow these steps. Otherwise, you can skip this setup:
 

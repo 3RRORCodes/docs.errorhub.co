@@ -37,6 +37,6 @@ If you use `qb-apartment`, [click here](../advanced-cutscene/configuration/qb-ap
 
 <summary>USING QB-VEHICLEKEYS?</summary>
 
-If you use `qb-vehiclekeys`, [click her](../advanced-cutscene/configuration/qb-vehiclekeys.md)e to view the essential modifications to ensure smooth functioning.
+If you use `qb-vehiclekeys`, [click her](broken-reference)e to view the essential modifications to ensure smooth functioning.
 
 </details>

@@ -6,14 +6,14 @@ To get the cutscene script working, you'll need to configure it with your clothi
 
 * [qb-clothing](clothing.md#qb-clothing)
 * [illenium-appearance](clothing.md#illenium-appearance)
-* [bl\_appearance](clothing.md#bl\_appearance)
+* [bl\_appearance](clothing.md#bl_appearance)
 * [codem-appearance](clothing.md#codem-appearance)
-* [ak47\_qb\_clothing](clothing.md#ak47\_clothing)
+* [ak47\_qb\_clothing](clothing.md#ak47_clothing)
 * [fivem-appearance](clothing.md#fivem-appearance)
 * [pure-clothing](clothing.md#pure-clothing)
 
 {% hint style="info" %}
-If your clothing script isn’t listed, join our [Discord](https://discord.errorhub.co) and open a support ticket to check if your script is compatible with the cutscene resource.
+If you're unsure about the compatibility of your script with the cutscene resource, feel free to open a support ticket. And if you don't see your clothing script listed, we'd love for you to join our Discord community!
 {% endhint %}
 
 {% tabs %}
@@ -57,7 +57,7 @@ end)
 RegisterNUICallback('close', function(_, cb)
     SetNuiFocus(false, false)
     if CreateFirstCharacter then 
-        TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+        exports["eh_cutscene"]:start() -- > Start eh_cutscene
         print('^2Started eh_cutscene')
     end
     CreateFirstCharacter = false
@@ -79,7 +79,7 @@ function InitializeCharacter(gender, onSubmit, onCancel)
     TriggerServerEvent("illenium-appearance:server:ChangeRoutingBucket")
     client.startPlayerCustomization(function(appearance)
         if (appearance) then
-            TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+            exports["eh_cutscene"]:start() -- > Start eh_cutscene
             print('^2Started eh_cutscene')
             TriggerServerEvent("illenium-appearance:server:saveAppearance", appearance)
             if onSubmit then
@@ -142,7 +142,7 @@ Config.OnMenuClose = function()
     TriggerEvent("mHud:ShowHud")
 
     if firstCharacter then 
-        TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+        exports["eh_cutscene"]:start() -- > Start eh_cutscene
         print('^2Started eh_cutscene')
     end
 
@@ -188,7 +188,7 @@ RegisterNetEvent('qb-clothes:client:CreateFirstCharacter', function()
     exports[resourceName]:startPlayerCustomization(function(appearance)
         if (appearance) then
             TriggerServerEvent('fivem-appearance:server:saveAppearance', appearance)
-            TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+            exports["eh_cutscene"]:start() -- > Start eh_cutscene
             print('^2Started eh_cutscene')
             end
         end, config)
@@ -203,7 +203,8 @@ end)
 
 ```lua
 if charactersFirstCharacter then 
-    TriggerEvent("eh_cutscene:client:StartCutscene")
+    exports["eh_cutscene"]:start() -- > Start eh_cutscene
+    print('^2Started eh_cutscene')
 end
 ```
 {% endtab %}
@@ -216,15 +217,11 @@ end
     function playCutScene()
         if not cutScenePlayed then
             cutScenePlayed = true
-            TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+            exports["eh_cutscene"]:start() -- > Start eh_cutscene
             print('^2Started eh_cutscene')
         end
     end
     ```
-
-{% hint style="info" %}
-The cutscene is only compatible with the latest version of MenanaAk47's QB Clothing.
-{% endhint %}
 {% endtab %}
 {% endtabs %}
 

@@ -8,7 +8,7 @@ This page contains all the necessary information for configuring and making the 
 
 <details>
 
-<summary>WHERE TO ADD THE START CUTSCENE EVENT/EXPORT?</summary>
+<summary>Where to add the cutscene start trigger ?</summary>
 
 [Click here](clothing.md) to see the modification for adding the event/export that initiates the cutscene. Apply the changes based on the clothing script you are using.
 
@@ -16,7 +16,7 @@ This page contains all the necessary information for configuring and making the 
 
 <details>
 
-<summary>WHICH MULTICHARACTER SYSTEMS REQUIRE MODIFICATIONS?</summary>
+<summary>Which multicharacter systems require additional modifications ?</summary>
 
 If you're using any of the multicharacter systems listed below, you'll need to make some additional modifications for the cutscene to work as expected.&#x20;
 
@@ -27,16 +27,18 @@ If you're using any of the multicharacter systems listed below, you'll need to m
 
 <details>
 
-<summary>USING QB-APARTMENT?</summary>
+<summary>Are using qb-apartments with starting apartment enabled ?</summary>
 
-If you use `qb-apartment`, [click here](qb-apartment.md) to view the essential modifications to ensure smooth functioning.
+If you're using [qb-apartments](https://github.com/qbcore-framework/qb-apartments) with the starting apartment enabled (i.e., `Apartments.Starting` is set to `true` in `qb-apartments/config`), you must follow these steps.
+
+[Click here](../../codekit/configuration/qb-apartment.md) to view the essential modifications to ensure smooth functioning.
 
 </details>
 
 <details>
 
-<summary>USING QB-VEHICLEKEYS?</summary>
+<summary>Taxi doors unexpectedly closing when players try to enter?</summary>
 
-If you use `qb-vehiclekeys`, [click her](qb-vehiclekeys.md)e to view the essential modifications to ensure smooth functioning.
+If your taxi doors are unexpectedly closing when players try to enter, [click here](vehicle-keys.md) to view the required modifications.
 
 </details>
