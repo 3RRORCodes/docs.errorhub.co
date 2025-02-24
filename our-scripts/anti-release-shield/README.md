@@ -1,5 +1,5 @@
 ---
-icon: plane-departure
+icon: shield-check
 cover: ../../.gitbook/assets/error.png
 coverY: -24
 ---
