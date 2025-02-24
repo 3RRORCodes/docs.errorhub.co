@@ -6,6 +6,7 @@
 * [Terms Of Service](error-hub/terms-of-service.md)
 * [Customer Service](error-hub/customer-service.md)
 * [Common Issues](error-hub/common-issues.md)
+* [FAQ](error-hub/faq.md)
 * [Discord Guide](error-hub/discord-guide.md)
 
 ## OUR SCRIPTS
