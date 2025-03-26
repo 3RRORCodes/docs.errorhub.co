@@ -1,6 +1,6 @@
 ---
 icon: shield-check
-cover: ../../.gitbook/assets/error.png
+cover: broken-reference
 coverY: -24
 ---
 

@@ -1,7 +1,21 @@
 ---
 icon: hand-wave
-cover: .gitbook/assets/Ehubblue2.png
-coverY: -1.3832599118942732
+cover: .gitbook/assets/logo with text v2.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: full
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
 # Welcome
