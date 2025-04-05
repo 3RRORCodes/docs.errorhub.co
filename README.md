@@ -1,6 +1,6 @@
 ---
 icon: hand-wave
-cover: .gitbook/assets/logo with text v2.png
+cover: .gitbook/assets/dc banner v2.jpg
 coverY: 0
 layout:
   cover:
