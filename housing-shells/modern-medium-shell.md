@@ -1,4 +1,5 @@
 ---
+icon: house
 cover: ../.gitbook/assets/Mid Modern Shell.png
 coverY: 0
 ---
@@ -13,9 +14,7 @@ Built on our standard layout, this version features a sleek modern style with cu
 
 {% embed url="https://youtu.be/zEmSO9pdRfk" %}
 
-<details>
-
-<summary>WHAT'S INSIDE</summary>
+### WHAT'S INSIDE
 
 * 1x Compact entry space
 * 1x Kitchen
@@ -24,11 +23,7 @@ Built on our standard layout, this version features a sleek modern style with cu
 * 1x Bedroom
 * 1x Bathroom
 
-</details>
-
-<details>
-
-<summary>OFFSETS</summary>
+### OFFSETS
 
 * Furnished
   * <mark style="color:orange;">Model (Hash)</mark>: `mid_mdrn_apt_f`
@@ -36,6 +31,3 @@ Built on our standard layout, this version features a sleek modern style with cu
 * Unfurnished
   * <mark style="color:orange;">Model (Hash)</mark>: `mid_mdrn_apt_u`
   * <mark style="color:orange;">Offset</mark>: `x = -5.573792, y = 2.778564, z = 1.000065, h = 187.085434`
-
-</details>
-
