@@ -23,6 +23,8 @@ Built on our standard layout, this version features a sleek modern style with cu
 * 1x Bedroom
 * 1x Bathroom
 
+***
+
 ### OFFSETS
 
 * Furnished
