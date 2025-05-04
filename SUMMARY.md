@@ -30,3 +30,7 @@
     * [Renzu Multicharacter](our-scripts/codekit/configuration/renzu-multicharacter.md)
     * [QB-Apartment](our-scripts/codekit/configuration/qb-apartment.md)
     * [QB-Vehiclekeys](our-scripts/codekit/configuration/qb-vehiclekeys.md)
+
+## HOUSING SHELLS
+
+* [Modern Medium Shell](housing-shells/modern-medium-shell.md)
