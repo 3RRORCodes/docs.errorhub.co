@@ -1,7 +1,7 @@
 ---
 icon: house
 cover: ../.gitbook/assets/DualStyle - Modern & Classic.png
-coverY: 0
+coverY: -30.993150684931507
 ---
 
 # Modern & Classic Mid Shell
