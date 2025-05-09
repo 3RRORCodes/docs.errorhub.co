@@ -33,5 +33,5 @@
 
 ## HOUSING SHELLS
 
-* [Modern Medium Shell](housing-shells/modern-medium-shell.md)
+* [Modern & Classic Mid Shell](housing-shells/modern-and-classic-mid-shell.md)
 * [Classic Medium Shell](housing-shells/classic-medium-shell.md)

@@ -1,6 +1,6 @@
 ---
 icon: house
-cover: ../.gitbook/assets/Mid Classic Shell.png
+cover: broken-reference
 coverY: 0
 ---
 
