@@ -17,7 +17,7 @@ The **Classic version** brings a warm, wooden finish with a more traditional vib
 While the structure and layout are the same, each style feels unique with its own textures and furnishings.\
 Simple to set up, smooth to run, and built to match different server themes.
 
-{% embed url="https://youtu.be/zEmSO9pdRfk" %}
+{% embed url="https://youtu.be/Zz2B-PUJQWk" %}
 
 ### WHAT'S INSIDE
 
