@@ -46,6 +46,6 @@ JOIN OUR DISCORD
 VISIT OUR GITHUB PAGE
 {% endembed %}
 
-{% embed url="https://errorhub.co" %}
+{% embed url="https://errorhub.app" %}
 VISIT OUR WEBSITE
 {% endembed %}
