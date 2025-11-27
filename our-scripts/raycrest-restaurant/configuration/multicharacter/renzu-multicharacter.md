@@ -16,6 +16,8 @@ qb-clothing:client:openMenu
 ```lua
 qb-clothes:client:CreateFirstCharacter
 ```
+
+After you replace the code follow the qb-clothing setup follow [this step](/broken/pages/92o5uKFK46ECbS7ftXqN#qb-clothing).
 {% endtab %}
 
 {% tab title="illenium-appearance" %}
@@ -29,7 +31,7 @@ exports['illenium-appearance']:startPlayerCustomization(function (appearance)
 3. Just below `finished = true` (around line 433), insert the following trigger:
 
 ```lua
-TriggerEvent("eh_cutscene:client:StartCutscene") -->> Start eh_cutscene
+exports["eh_cutscene"]:start() -- > Start eh_cutscene
 print('^2Started eh_cutscene')
 ```
 

@@ -17,7 +17,7 @@ qb-clothing:client:openMenu
 qb-clothes:client:CreateFirstCharacter
 ```
 
-After you replace the code follow the qb-clothing setup follow [this step](../../../codekit/configuration/clothing.md#qb-clothing).
+After you replace the code follow the qb-clothing setup follow [this step](/broken/pages/92o5uKFK46ECbS7ftXqN#qb-clothing).
 {% endtab %}
 
 {% tab title="illenium-appearance" %}

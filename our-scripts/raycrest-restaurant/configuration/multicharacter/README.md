@@ -7,5 +7,5 @@
 If you're using any of the multicharacter systems listed below, you'll need to make some additional modifications for the cutscene to work as expected.&#x20;
 
 * [renzu\_multicharacter](/broken/pages/AGfeKt4wffRBJnLIhGcL)
-* [ZSX\_Multicharacter](zsx-multicharacter.md)
+* [ZSX\_Multicharacter](../../../advanced-cutscene/configuration/multicharacter/zsx-multicharacter.md)
 
