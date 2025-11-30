@@ -25,14 +25,9 @@
 * [Raycrest Restaurant](our-scripts/raycrest-restaurant/README.md)
   * [Installation ](our-scripts/raycrest-restaurant/installation.md)
   * [Configuration](our-scripts/raycrest-restaurant/configuration/README.md)
-    * [Clothing](our-scripts/raycrest-restaurant/configuration/clothing.md)
-    * [Multicharacter](our-scripts/raycrest-restaurant/configuration/multicharacter/README.md)
-      * [Renzu Multicharacter](our-scripts/raycrest-restaurant/configuration/multicharacter/renzu-multicharacter.md)
-      * [ZSX Multicharacter](our-scripts/raycrest-restaurant/configuration/multicharacter/zsx-multicharacter.md)
-    * [QB-Apartment](our-scripts/raycrest-restaurant/configuration/qb-apartment.md)
-    * [Vehicle Keys](our-scripts/raycrest-restaurant/configuration/vehicle-keys.md)
-  * [Events and Exports](our-scripts/raycrest-restaurant/events-and-exports.md)
-  * [Shared Files](our-scripts/raycrest-restaurant/shared-files.md)
+    * [Adding Inventory Images](our-scripts/raycrest-restaurant/configuration/adding-inventory-images.md)
+    * [Adding Items](our-scripts/raycrest-restaurant/configuration/adding-items.md)
+    * [Adding Job](our-scripts/raycrest-restaurant/configuration/adding-job.md)
 
 ## HOUSING SHELLS
 
