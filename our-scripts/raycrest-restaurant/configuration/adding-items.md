@@ -64,19 +64,51 @@ ray_colddrink      = { name = 'ray_colddrink',       label = 'Cold Drink',      
 Add the following items to your <mark style="color:yellow;">`ox_inventory/data/items.lua`</mark> file:
 
 ```lua
-local function onVehicleAttemptToEnter(vehicle)
-    if Entity(vehicle).state.doorslockstate then return end
-
-    if exports["eh_cutscene"]:isVehicleTaxi(vehicle) then return end
-
-    local ped = GetPedInVehicleSeat(vehicle, -1)
-    if IsPedAPlayer(ped) then return end
-
-    local isLocked = not GetVehicleConfig(vehicle).noLock and getIsVehicleInitiallyLocked(vehicle, ped and ped ~= 0)
-    local lockState = isLocked and 2 or 1
-    SetVehicleDoorsLocked(vehicle, lockState)
-    TriggerServerEvent('qb-vehiclekeys:server:setVehLockState', NetworkGetNetworkIdFromEntity(vehicle), lockState)
-end
+-- Raycrest Ingredients
+["ray_rice"] = { label = "Rice", weight = 300, stack = true, description = "Fresh rice for cooking", client = { image = "ray_rice.png" } },
+["ray_onion"] = { label = "Onion", weight = 150, stack = true, description = "Fresh onion for cooking", client = { image = "ray_onion.png" } },
+["ray_tomato"] = { label = "Tomato", weight = 120, stack = true, description = "Fresh tomato for cooking", client = { image = "ray_tomato.png" } },
+["ray_carrot"] = { label = "Carrot", weight = 100, stack = true, description = "Fresh carrot for cooking", client = { image = "ray_carrot.png" } },
+["ray_curry_paste"] = { label = "Curry Paste", weight = 200, stack = true, description = "Spicy curry paste", client = { image = "ray_curry_paste.png" } },
+["ray_chicken"] = { label = "Chicken", weight = 400, stack = true, description = "Fresh chicken meat", client = { image = "ray_chicken.png" } },
+["ray_dough"] = { label = "Dough", weight = 250, stack = true, description = "Fresh dough for making dumplings", client = { image = "ray_dough.png" } },
+["ray_nori"] = { label = "Nori Sheet", weight = 50, stack = true, description = "Seaweed sheet for sushi", client = { image = "ray_nori.png" } },
+["ray_fish"] = { label = "Fresh Fish", weight = 500, stack = true, description = "Fresh fish for cooking", client = { image = "ray_fish.png" } },
+["ray_cucumber"] = { label = "Cucumber", weight = 180, stack = true, description = "Fresh cucumber", client = { image = "ray_cucumber.png" } },
+["ray_egg"] = { label = "Egg", weight = 100, stack = true, description = "Fresh egg", client = { image = "ray_egg.png" } },
+["ray_soy_sauce"] = { label = "Soy Sauce", weight = 200, stack = true, description = "Soy sauce for seasoning", client = { image = "ray_soy_sauce.png" } },
+["ray_garlic"] = { label = "Garlic", weight = 80, stack = true, description = "Fresh garlic cloves", client = { image = "ray_garlic.png" } },
+["ray_crab"] = { label = "Crab", weight = 600, stack = true, description = "Fresh crab", client = { image = "ray_crab.png" } },
+["ray_octopus"] = { label = "Octopus", weight = 550, stack = true, description = "Fresh octopus", client = { image = "ray_octopus.png" } },
+["ray_shrimp"] = { label = "Shrimp", weight = 300, stack = true, description = "Fresh shrimp", client = { image = "ray_shrimp.png" } },
+["ray_apple"] = { label = "Apple", weight = 150, stack = true, description = "Fresh apple", client = { image = "ray_apple.png" } },
+["ray_flour"] = { label = "Flour", weight = 400, stack = true, description = "All-purpose flour", client = { image = "ray_flour.png" } },
+["ray_butter"] = { label = "Butter", weight = 250, stack = true, description = "Fresh butter", client = { image = "ray_butter.png" } },
+["ray_sugar"] = { label = "Sugar", weight = 300, stack = true, description = "Granulated sugar", client = { image = "ray_sugar.png" } },
+["ray_cinnamon"] = { label = "Cinnamon", weight = 100, stack = true, description = "Ground cinnamon spice", client = { image = "ray_cinnamon.png" } },
+["ray_banana"] = { label = "Banana", weight = 120, stack = true, description = "Fresh banana", client = { image = "ray_banana.png" } },
+["ray_ice_cream"] = { label = "Ice Cream", weight = 200, stack = true, description = "Creamy ice cream", client = { image = "ray_ice_cream.png" } },
+["ray_chocolate"] = { label = "Chocolate", weight = 150, stack = true, description = "Dark chocolate", client = { image = "ray_chocolate.png" } },
+["ray_whipped_cream"] = { label = "Whipped Cream", weight = 180, stack = true, description = "Fresh whipped cream", client = { image = "ray_whipped_cream.png" } },
+["ray_cherry"] = { label = "Cherry", weight = 50, stack = true, description = "Fresh cherry", client = { image = "ray_cherry.png" } },
+["ray_coffee_bean"] = { label = "Coffee Bean", weight = 200, stack = true, description = "Roasted coffee beans", client = { image = "ray_coffee_bean.png" } },
+["ray_milk"] = { label = "Milk", weight = 300, stack = true, description = "Fresh milk", client = { image = "ray_milk.png" } },
+["ray_water"] = { label = "Water", weight = 500, stack = true, description = "Clean water for cooking and drinks", client = { image = "ray_water.png" } },
+["ray_carbonation"] = { label = "Carbonation", weight = 100, stack = true, description = "Carbonation for drinks", client = { image = "ray_carbonation.png" } },
+["ray_syrup"] = { label = "Flavor Syrup", weight = 200, stack = true, description = "Flavor syrup for drinks", client = { image = "ray_syrup.png" } },
+-- Raycrest Dishes
+["ray_dumplings"] = { label = "Dumplings", weight = 280, stack = true, description = "Steamed dumplings filled with savory meat", client = { image = "ray_dumplings.png" } },
+["ray_sushirolls"] = { label = "Sushi Rolls", weight = 250, stack = true, description = "Fresh sushi rolls", client = { image = "ray_sushirolls.png" } },
+["ray_friedrice"] = { label = "Fried Rice", weight = 400, stack = true, description = "Delicious fried rice with vegetables", client = { image = "ray_friedrice.png" } },
+["ray_crabdish"] = { label = "Crab Dish", weight = 500, stack = true, description = "Fresh crab prepared to perfection", client = { image = "ray_crabdish.png" } },
+["ray_friedfish"] = { label = "Fried Fish", weight = 420, stack = true, description = "Crispy fried fish", client = { image = "ray_friedfish.png" } },
+["ray_octopusdish"] = { label = "Octopus Dish", weight = 480, stack = true, description = "Tender octopus dish", client = { image = "ray_octopusdish.png" } },
+["ray_shrimpdish"] = { label = "Shrimp Dish", weight = 380, stack = true, description = "Fresh shrimp dish", client = { image = "ray_shrimpdish.png" } },
+["ray_applepotpie"] = { label = "Apple Pot Pie", weight = 300, stack = true, description = "Warm apple pot pie with cinnamon", client = { image = "ray_applepotpie.png" } },
+["ray_bananasplit"] = { label = "Banana Split", weight = 280, stack = true, description = "Classic banana split with ice cream", client = { image = "ray_bananasplit.png" } },
+["ray_lavacake"] = { label = "Lava Cake", weight = 250, stack = true, description = "Warm chocolate lava cake", client = { image = "ray_lavacake.png" } },
+["ray_hotdrink"] = { label = "Hot Drink", weight = 220, stack = true, description = "Warm and comforting hot drink", client = { image = "ray_hotdrink.png" } },
+["ray_colddrink"] = { label = "Cold Drink", weight = 200, stack = true, description = "Refreshing cold drink", client = { image = "ray_colddrink.png" } }
 ```
 {% endtab %}
 {% endtabs %}
