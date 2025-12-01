@@ -1,5 +1,4 @@
 ---
-hidden: true
 icon: tree-palm
 cover: ../../.gitbook/assets/Raycrest Restaurant Thumbnail.png
 coverY: 89.29783579089207
